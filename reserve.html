@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve | 漁師たい焼き屋さん</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-amber-500">
+    <nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl border-b border-white/10 px-6 py-5 flex justify-between items-center md:px-12 transition-all duration-300">
+        <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">漁師たい焼き屋さん</a>
+        <div class="flex gap-4 md:gap-8 text-xs md:text-sm font-bold tracking-widest uppercase items-center text-white">
+            <a href="menu.html" class="hover:text-amber-500 transition-colors">お品書き</a>
+            <a href="access.html" class="hover:text-amber-500 transition-colors">場所・時間</a>
+            <a href="reserve.html" class="text-amber-500 transition-colors">事前予約</a>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-32 px-6 md:px-12 max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h1 class="text-7xl font-black tracking-tighter mb-6 italic uppercase">Order Ahead</h1>
+            <p class="text-zinc-400 text-xl max-w-xl mx-auto font-light">
+                お待たせすることなく、焼きたてをお渡しします。<br>大口注文やイベントのご依頼もこちらからどうぞ。
+            </p>
+        </div>
+
+        <div class="bg-zinc-900 rounded-3xl p-8 md:p-16 border border-zinc-800 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[100px] -mr-32 -mt-32"></div>
+            
+            <form class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">お名前</label>
+                        <input type="text" class="w-full bg-zinc-800 border-b-2 border-zinc-700 py-4 px-0 focus:outline-none focus:border-amber-500 transition-colors text-white placeholder-zinc-600" placeholder="漁師 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">ご連絡先</label>
+                        <input type="tel" class="w-full bg-zinc-800 border-b-2 border-zinc-700 py-4 px-0 focus:outline-none focus:border-amber-500 transition-colors text-white placeholder-zinc-600" placeholder="000-0000-0000">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">受け取り希望場所</label>
+                        <select class="w-full bg-zinc-800 border-b-2 border-zinc-700 py-4 px-0 focus:outline-none focus:border-amber-500 transition-colors text-white appearance-none">
+                            <option>明石港・親水広場</option>
+                            <option>明石公園</option>
+                            <option>アスピア明石付近</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">注文内容</label>
+                        <textarea class="w-full bg-zinc-800 border-b-2 border-zinc-700 py-4 px-0 focus:outline-none focus:border-amber-500 transition-colors text-white placeholder-zinc-600 h-32 resize-none" placeholder="例：つぶあん5個、カスタード3個"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-amber-500 text-black font-black py-6 rounded-xl hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl text-xl flex items-center justify-center gap-4">
+                            <span>予約を確定する</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                        <p class="text-zinc-600 text-xs mt-6 text-center italic">
+                            ※送信後、スタッフより確認のお電話を差し上げます。
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
